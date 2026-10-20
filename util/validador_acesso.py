@@ -2,7 +2,7 @@ requisicao = {
     "docente_ativo": True,
     "hora_atual": 4,
     "nicho_ocupado": False,
-    "chave_solicitada": "Lab 01"
+    "chave_solicitada": "Lab 01",
 }
 
 if not requisicao["docente_ativo"]:
@@ -14,3 +14,13 @@ elif requisicao["nicho_ocupado"]:
 else:
     print(f"Acesso Concedido: Chave do {requisicao['chave_solicitada']} Liberada.")
 
+
+def validar_acesso(id_cracha: str, horario: int) -> dict:
+    """Função que valida o acesso do colaborador ao armário de chave
+    Args:
+    id_cracha (str): id do crachá do colaborador.
+    horario(int): horario da retirada ou devolução.
+    returns:
+    dict: Dicionario com o resultado da validação."""
+
+    colaborador_senai = colaboradores.get(id_cracha)
