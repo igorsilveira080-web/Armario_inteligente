@@ -17,8 +17,11 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from core import views 
+from core import views
+
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('',views.index, name='inicial'),
+    path('', views.index, name='inicial'),
+    path('api/status_nichos', views.buscar_status_nichos_banco, name='status_nichos'),
+
 ]
