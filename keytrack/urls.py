@@ -22,6 +22,6 @@ from core import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', views.index, name='inicial'),
-    path('api/status_nichos', views.buscar_status_nichos_banco, name='status_nichos'),
+
 
 ]
